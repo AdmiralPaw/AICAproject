@@ -12,5 +12,7 @@ add_executable(Google_Tests_run
         TableTests.cpp
         ../Data/Implementations/TableImpl_0.cpp
         ../Utils/Utils.cpp
-        )
+        ../Base/Settings.cpp
+        ../Base/Implementations/AlgorithmImpl_0.cpp
+        AlgorithmTests.cpp)
 target_link_libraries(Google_Tests_run gtest gtest_main)

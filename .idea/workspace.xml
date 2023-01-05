@@ -25,20 +25,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da94fd3c-b771-436c-b77f-22261bdc8a43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoogleTests/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoogleTests/TableTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoogleTests/lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GoogleTests/test_main.cpp" afterDir="false" />
+    <list default="true" id="da94fd3c-b771-436c-b77f-22261bdc8a43" name="Changes" comment="[AICA-04] - Реализовал тесты для TableImpl_0.cpp">
+      <change afterPath="$PROJECT_DIR$/GoogleTests/AlgorithmTests.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base/Implementations/AlgorithmImpl_0.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Base/Implementations/AlgorithmImpl_0.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base/Implementations/AlgorithmImpl_0.h" beforeDir="false" afterPath="$PROJECT_DIR$/Base/Implementations/AlgorithmImpl_0.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Implementations/TableImpl_0.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Implementations/TableImpl_0.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Implementations/TableImpl_0.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Implementations/TableImpl_0.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Interfaces/Table.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Interfaces/Table.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/Settings.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Base/Settings.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/Settings.h" beforeDir="false" afterPath="$PROJECT_DIR$/Base/Settings.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/CompressData.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data/CompressData.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleTests/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleTests/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleTests/TableTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleTests/TableTests.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,8 +176,16 @@
       <option name="presentableId" value="Default" />
       <updated>1672793746425</updated>
       <workItem from="1672793747565" duration="3840000" />
-      <workItem from="1672892490512" duration="4259000" />
+      <workItem from="1672892490512" duration="6300000" />
     </task>
+    <task id="LOCAL-00001" summary="[AICA-04] - Реализовал тесты для TableImpl_0.cpp">
+      <created>1672897389353</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672897389353</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,10 +196,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="AICA-04" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[AICA-04] - Реализовал тесты для TableImpl_0.cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="[AICA-04] - Реализовал тесты для TableImpl_0.cpp" />
   </component>
 </project>

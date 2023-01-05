@@ -11,6 +11,11 @@ typedef uint8_t block;
 
 class Settings {
 public:
+    Settings(unsigned int maxTableSize, unsigned int maxCullingCount, unsigned int maxRefreshValue);
+
+    Settings() = default;
+
+public:
     unsigned int maxTableSize = 16;
     unsigned int maxCullingCount = 8;
     unsigned int maxRefreshValue = 4;
