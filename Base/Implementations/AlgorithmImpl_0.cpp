@@ -6,6 +6,6 @@
 #include "../../Utils/Utils.h"
 
 CompressData AlgorithmImpl_0::compress(block originalByte) {
-    Utils::error(__func__ , Utils::METHOD_NOT_IMPLEMENTED);
+    Utils::error(__func__, Utils::METHOD_NOT_IMPLEMENTED);
     return {};
 }

@@ -3,6 +3,8 @@ project (AICAproject)
 
 set(CMAKE_CXX_STANDARD 20)
 
+add_subdirectory(GoogleTests)
+
 add_executable(AICAproject
         main.cpp
         Base/Settings.cpp

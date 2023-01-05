@@ -9,11 +9,15 @@
 #include "../../Base/Settings.h"
 
 class Table {
+private:
+    virtual void arrange(int &foundedIndex) = 0;
+
+    virtual void remember(block &originalByte) = 0;
+
 public:
     virtual int find(block &originalByte) = 0;
-    virtual void arrange(int &foundedIndex)= 0;
-    virtual void remember(block &originalByte)= 0;
-    virtual unsigned int currentTableEntropy()= 0;
+
+    virtual unsigned int currentTableEntropy() = 0;
 };
 
 

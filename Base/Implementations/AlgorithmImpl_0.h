@@ -6,12 +6,12 @@
 #define AICAPROJECT_ALGORITHMIMPL_0_H
 
 
-#include "Algorithm/Algorithm.h"
+#include "../../Data/CompressData.h"
+#include "../Interfaces/Algorithm.h"
 
-class AlgorithmImpl_0: public Algorithm{
+class AlgorithmImpl_0 : public Algorithm {
 public:
     CompressData compress(block originalByte) override;
-
 };
 
 
