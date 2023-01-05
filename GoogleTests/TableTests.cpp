@@ -6,10 +6,11 @@
 #include "../Base/Settings.h"
 #include "../Data/Interfaces/Table.h"
 #include "../Data/Implementations/TableImpl_0.h"
+#include <random>
 
 class TableTests : public ::testing::Test {
 protected:
-    Settings settings = Settings(16, 8, 4);
+    Settings settings = Settings(8, 8, 4);
     Table *table = new TableImpl_0(settings);
 
     block input[32] = {
@@ -22,18 +23,36 @@ protected:
             2, 2, 0, 1,
             0, 0, 3, 1
     };
-    int i = 0;
+    int counter = 0;
+
+    static const int inputSize = 52428800;
+    block largeInput[inputSize];
+
+    void prepareData() {
+        srand(0);
+        for (unsigned char &i: largeInput) {
+            i = rand();
+        }
+    }
+
+    void speedTest() {
+        for (unsigned char &i: largeInput) {
+            table->find(largeInput[i]);
+        }
+    }
 
     void inputChecker(int assertIndex, int assertEntropy) {
-        ASSERT_EQ(table->find(input[i++]), assertIndex);
+        ASSERT_EQ(table->find(input[counter++]), assertIndex);
         ASSERT_EQ(table->currentTableEntropy(), assertEntropy);
     }
 };
 
 TEST_F(TableTests, TestTableAPI) {
+    table = new TableImpl_0(settings);
+
     ASSERT_EQ(table->currentTableEntropy(), 0);
     // Table:
-    inputChecker(-1, 1); // 0-> Table: 0                culling 8
+    inputChecker(-1, 0); // 0-> Table: 0                culling 8
     inputChecker(-1, 1); // 1-> Table: 1 0              culling 8
     inputChecker(0, 1);  // 1-> Table: 1 0              culling 7
     inputChecker(0, 1);  // 1-> Table: 1 0              culling 6
@@ -72,4 +91,17 @@ TEST_F(TableTests, TestTableAPI) {
     inputChecker(0, 3);  // 0-> Table: 0 1 2 9 8 7 6    culling 6
     inputChecker(-1, 3); // 3-> Table: 3 0 1 2 9 8 7 6  culling 6
     inputChecker(2, 3);  // 1-> Table: 1 3 0 2 9 8 7 6  culling 5
+}
+
+TEST_F(TableTests, SpeedTest) {
+    table = new TableImpl_0(settings);
+
+    prepareData();
+    std::clock_t start = clock();
+
+    speedTest();
+
+    std::clock_t end = clock();
+    printf("\ndataSize = %d(Mb)", inputSize / 1024 / 1024);
+    printf("\ntime = %ld(ms)\n\n", end - start);
 }

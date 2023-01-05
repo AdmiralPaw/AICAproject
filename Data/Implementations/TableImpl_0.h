@@ -7,10 +7,17 @@
 
 
 #include "../Interfaces/Table.h"
+#include "../CompressData.h"
 
 class TableImpl_0 : public Table {
 private:
     Settings settings;
+    block *table;
+
+    block cullingCount = settings.maxCullingCount;
+    block currentOccupation = 0;
+
+    CompressData data;
 
     void arrange(int &foundedIndex) override;
 
