@@ -7,7 +7,7 @@
 
 #include <cstdint>
 
-typedef uint8_t block;
+using block = uint8_t;
 
 class Settings {
 public:
@@ -15,7 +15,6 @@ public:
 
     Settings() = default;
 
-public:
     unsigned int maxTableSize = 16;
     unsigned int maxCullingCount = 8;
     unsigned int maxRefreshValue = 4;

@@ -11,7 +11,6 @@ add_executable(AICAproject
         Base/Settings.h
         Base/Interfaces/Algorithm.cpp
         Base/Interfaces/Algorithm.h
-        Data/Interfaces/Table.cpp
         Data/Interfaces/Table.h
         Data/CompressData.cpp
         Data/CompressData.h

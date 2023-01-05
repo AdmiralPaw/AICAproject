@@ -7,11 +7,11 @@
 #include "../../Utils/Utils.h"
 
 TableImpl_0::TableImpl_0(Settings settings) : settings(settings) {
-    this->table = new block[this->settings.maxTableSize];
+    this->table = new block[this->settings.maxTableSize] { 0 };
 }
 
-int TableImpl_0::find(block &originalByte) {
-    for (int i = 0; i <= currentOccupation; i++) {
+int TableImpl_0::find(block originalByte) {
+    for (int i = 0; i < currentOccupation; i++) {
         if (originalByte == table[i]) {
             arrange(i);
             return i;
@@ -21,9 +21,9 @@ int TableImpl_0::find(block &originalByte) {
     return -1;
 }
 
-void TableImpl_0::arrange(int &foundedIndex) {
+void TableImpl_0::arrange(int foundedIndex) {
     block temp = table[foundedIndex];
-    memcpy(&table[1], &table[0], foundedIndex * sizeof(block));
+    memmove(&table[1], &table[0], foundedIndex);
     table[0] = temp;
 
     if (cullingCount > 0) {
@@ -34,10 +34,10 @@ void TableImpl_0::arrange(int &foundedIndex) {
     }
 }
 
-void TableImpl_0::remember(block &originalByte) {
-    memcpy(&table[1], &table[0], currentOccupation * sizeof(block));
+void TableImpl_0::remember(block originalByte) {
+    memmove(&table[1], &table[0], currentOccupation);
     this->table[0] = originalByte;
-    if (this->currentOccupation + 1 < this->settings.maxTableSize) {
+    if (this->currentOccupation < this->settings.maxTableSize) {
         this->currentOccupation = this->currentOccupation + 1;
     }
 }

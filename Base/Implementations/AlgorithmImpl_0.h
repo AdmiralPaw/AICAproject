@@ -10,7 +10,12 @@
 #include "../Interfaces/Algorithm.h"
 
 class AlgorithmImpl_0 : public Algorithm {
+private:
+    Table *table;
+
 public:
+    explicit AlgorithmImpl_0(Table *table);
+
     CompressData compress(block originalByte) override;
 };
 

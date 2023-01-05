@@ -8,7 +8,7 @@
 #include <map>
 #include <string>
 
-class Utils {
+class [[maybe_unused]] Utils {
 public:
     enum Cause {
         METHOD_NOT_IMPLEMENTED

@@ -25,8 +25,8 @@ protected:
     };
     int counter = 0;
 
-    static const int inputSize = 52428800;
-    block largeInput[inputSize];
+    static const int inputSize = 104857600;
+    block largeInput[inputSize]{};
 
     void prepareData() {
         srand(0);
@@ -94,7 +94,7 @@ TEST_F(TableTests, TestTableAPI) {
 }
 
 TEST_F(TableTests, SpeedTest) {
-    table = new TableImpl_0(settings);
+    table = new TableImpl_0(Settings(8, 8, 4));
 
     prepareData();
     std::clock_t start = clock();
@@ -103,5 +103,6 @@ TEST_F(TableTests, SpeedTest) {
 
     std::clock_t end = clock();
     printf("\ndataSize = %d(Mb)", inputSize / 1024 / 1024);
-    printf("\ntime = %ld(ms)\n\n", end - start);
+    printf("\ntime = %ld(ms)", end - start);
+    printf("\nspeed_8 = %0.2f(Mib/s)\n\n", ((double) inputSize / 1024 / 1024) / (end - start) * 1000);
 }

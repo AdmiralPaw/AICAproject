@@ -14,19 +14,19 @@ private:
     Settings settings;
     block *table;
 
-    block cullingCount = settings.maxCullingCount;
-    block currentOccupation = 0;
+    unsigned int cullingCount = settings.maxCullingCount;
+    unsigned int currentOccupation = 0;
 
     CompressData data;
 
-    void arrange(int &foundedIndex) override;
+    void arrange(int foundedIndex) override;
 
-    void remember(block &originalByte) override;
+    void remember(block originalByte) override;
 
 public:
     explicit TableImpl_0(Settings settings);
 
-    int find(block &originalByte) override;
+    int find(block originalByte) override;
 
     unsigned int currentTableEntropy() override;
 

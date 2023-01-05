@@ -11,6 +11,8 @@
 
 class Algorithm {
 public:
+    Algorithm() = default;
+    virtual ~Algorithm() = default;
     virtual CompressData compress(block originalByte) = 0;
     //decompressData decompress(originalByte)
 };
