@@ -9,6 +9,7 @@
 #include "../Base/Settings.h"
 
 class CompressData {
+public:
     bool compressBit = false;
     int indexInTable = -1;
     unsigned int resultCountBits = 0;
