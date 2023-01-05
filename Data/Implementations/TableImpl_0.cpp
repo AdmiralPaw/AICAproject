@@ -5,7 +5,7 @@
 #include "TableImpl_0.h"
 #include "../../Utils/Utils.h"
 
-TableImpl_0::TableImpl_0(const Settings &settings) : settings(settings) {}
+TableImpl_0::TableImpl_0(Settings settings) : settings(settings) {}
 
 int TableImpl_0::find(block &originalByte) {
     Utils::error(__func__, Utils::METHOD_NOT_IMPLEMENTED);

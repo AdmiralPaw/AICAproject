@@ -8,17 +8,18 @@
 
 #include "../Interfaces/Table.h"
 
-class TableImpl_0: public Table {
+class TableImpl_0 : public Table {
 private:
     Settings settings;
-public:
-    explicit TableImpl_0(const Settings &settings);
-
-    int find(block &originalByte) override;
 
     void arrange(int &foundedIndex) override;
 
     void remember(block &originalByte) override;
+
+public:
+    explicit TableImpl_0(Settings settings);
+
+    int find(block &originalByte) override;
 
     unsigned int currentTableEntropy() override;
 
